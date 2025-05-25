@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job Requirement Card</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    /* Your existing CSS here */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9ecef;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-header {
+      background-color: #ffc107;
+      color: #212529;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .card-header h1,
+    .card-header h2,
+    .card-header h3 {
+      margin: 6px 0;
+    }
+
+    #countdown {
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #212529;
+    }
+    #countdown.highlight {
+    color: #e63946; /* nice red */
+    background-color: #fceae9; /* subtle pink background */
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+  }
+    .card-body {
+      padding: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 15px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      font-size: 0.95em;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+
+    .terms {
+      font-size: 0.9em;
+      color: #333;
+    }
+
+    .terms ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .interview-address {
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 0.95em;
+      color: #000;
+    }
+
+    .interview-address p {
+      margin: 4px 0;
+    }
+
+    .contact-info {
+      margin-top: 15px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 15px 10px;
+      font-size: 0.95em;
+      position: relative;
+    }
+
+    .contact-info a {
+      color: #ffc107;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .fa-icon {
+      margin-right: 6px;
+      color: #ffc107;
+    }
+
+    /* New buttons styling */
+    .btn {
+      background-color: #ffc107;
+      color: #212529;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 5px 3px;
+      font-size: 0.9em;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e0a800;
+    }
+
+    .copy-btn {
+      margin-left: 6px;
+      background: none;
+      color: #ffc107;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      vertical-align: middle;
+      transition: color 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      color: #e0a800;
+    }
+
+    /* Terms toggle */
+    .terms.collapsed ul {
+      display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+      .card-header h1 {
+        font-size: 1em;
+      }
+
+      th,
+      td {
+        font-size: 0.85em;
+        padding: 8px;
+      }
+
+      .card-body,
+      .card-header,
+      .contact-info {
+        padding: 10px;
+      }
+
+      .contact-info {
+        font-size: 0.88em;
+      }
+
+      .terms li {
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card" id="job-card">
+    <div class="card-header">
+      <h2>URGENT REQUIREMENT FOR SAUDI ARABIA</h2>
+      <h3>Tower Planning Trading & Cont. Co. Ltd</h3>
+      <h1>FACILITY MANAGEMENT HOSPITAL MAINTENANCE PROJECT</h1>
+      <h3>CLIENT INTERVIEW IN PATNA ON 28TH MAY, 2025</h3>
+      <div id="countdown" aria-live="polite" aria-atomic="true">
+        Loading countdown...
+      </div>
+    </div>
+    <div class="card-body">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">SL#</th>
+            <th scope="col">CATEGORY</th>
+            <th scope="col">SALARY SR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>ELECTRICIAN (RETURNER)</td><td>1800-2000</td></tr>
+          <tr><td>2</td><td>PLUMBER (RETURNER)</td><td>1500-1800</td></tr>
+          <tr><td>3</td><td>HVAC TECHNICIAN (RETURNER)</td><td>2300-2500</td></tr>
+          <tr><td>4</td><td>FINISHING CARPENTER (RETURNER)</td><td>1500-1800</td></tr>
+          <tr><td>5</td><td>MEDICAL GAS TECHNICIAN</td><td>2500-3000</td></tr>
+          <tr><td>6</td><td>MASON</td><td>1500-1800</td></tr>
+          <tr><td>7</td><td>WALL PAINTER</td><td>1500-1800</td></tr>
+          <tr><td>8</td><td>HELPER</td><td>1000</td></tr>
+        </tbody>
+      </table>
+      <div class="terms collapsed" id="terms-section">
+        <p>
+          <strong>TERMS & CONDITIONS:</strong>
+          <button class="btn" id="toggle-terms-btn" aria-expanded="false" aria-controls="terms-list">Show More</button>
+        </p>
+        <ul id="terms-list">
+          <li>AGE LIMIT: 22-40 YEARS</li>
+          <li>ITI/DIPLOMA MUST</li>
+          <li>PERIOD OF CONTRACT: 02 YEARS</li>
+          <li>8 HOURS DUTY + OVER TIME + FREE FOOD</li>
+          <li>NO SKILL TEST</li>
+          <li>ACCOMMODATION, TRANSPORTATION AND MEDICAL INSURANCE ARE PROVIDED BY COMPANY</li>
+        </ul>
+      </div>
+      <button class="btn" id="scroll-to-interview-btn">View Interview Address</button>
+      <div class="interview-address" id="interview-address">
+        <p><strong>Interview Address:</strong></p>
+        <p>SAHARA TECHNICAL TRADE CENTRE</p>
+        <p>Technical Training, Trade Test & Interview Centre</p>
+        <p>501, 5th Floor, N.P. Centre, New Dakbanglow Road, Patna-800 001</p>
+      </div>
+    </div>
+    <div class="contact-info">
+      <p><strong>Office Address:</strong></p>
+      <p>FM ENTERPRISES</p>
+      <p>2nd Floor, Mohini Market, Exhibition Road, Near: Hai Complex Patna-1</p>
+      <p>
+        <i class="fas fa-phone fa-icon"></i>
+        <a href="tel:7979038590" id="phone1">7979038590</a>
+        <button class="copy-btn" data-copy="7979038590" title="Copy phone number">
+          <i class="fas fa-copy"></i>
+        </button>
+        ,
+        <a href="tel:8651405911" id="phone2">8651405911</a>
+        <button class="copy-btn" data-copy="8651405911" title="Copy phone number">
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+      <p>
+        <i class="fas fa-envelope fa-icon"></i>
+        <a href="mailto:fmalik662@gmail.com" id="email1">fmalik662@gmail.com</a>
+        <button class="copy-btn" data-copy="fmalik662@gmail.com" title="Copy email">
+          <i class="fas fa-copy"></i>
+        </button>
+        ,
+        <a href="mailto:fmenterprises21@gmail.com" id="email2">fmenterprises21@gmail.com</a>
+        <button class="copy-btn" data-copy="fmenterprises21@gmail.com" title="Copy email">
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+      <button class="btn" id="print-btn" title="Print this card">
+        <i class="fas fa-print"></i> Print Card
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Toggle Terms & Conditions
+    const termsSection = document.getElementById("terms-section");
+    const toggleTermsBtn = document.getElementById("toggle-terms-btn");
+    toggleTermsBtn.addEventListener("click", () => {
+      const expanded = toggleTermsBtn.getAttribute("aria-expanded") === "true";
+      if (expanded) {
+        termsSection.classList.add("collapsed");
+        toggleTermsBtn.textContent = "Show More";
+        toggleTermsBtn.setAttribute("aria-expanded", "false");
+      } else {
+        termsSection.classList.remove("collapsed");
+        toggleTermsBtn.textContent = "Show Less";
+        toggleTermsBtn.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    // Smooth scroll to interview address
+    const scrollBtn = document.getElementById("scroll-to-interview-btn");
+    const interviewAddress = document.getElementById("interview-address");
+    scrollBtn.addEventListener("click", () => {
+      interviewAddress.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    // Copy to clipboard buttons
+    const copyButtons = document.querySelectorAll(".copy-btn");
+    copyButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const textToCopy = btn.getAttribute("data-copy");
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          // Optional: Show a tooltip or temporary message
+          btn.innerHTML = '<i class="fas fa-check" style="color: #28a745;"></i>';
+          setTimeout(() => {
+            btn.innerHTML = '<i class="fas fa-copy"></i>';
+          }, 1500);
+        });
+      });
+    });
+
+    // Print button functionality
+    const printBtn = document.getElementById("print-btn");
+    printBtn.addEventListener("click", () => {
+      const printContents = document.getElementById("job-card").innerHTML;
+      const originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
+      // Reload scripts or reattach events if necessary after print
+      window.location.reload();
+    });
+
+    // Countdown to interview date
+    function updateCountdown() {
+      const countdownEl = document.getElementById("countdown");
+      const interviewDate = new Date("May 28, 2025 09:00:00").getTime(); // Interview time: 9 AM
+      const now = new Date().getTime();
+      const diff = interviewDate - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "Interview date has arrived or passed.";
+        clearInterval(countdownInterval);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.textContent = `Time until interview: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown(); // initial call
+    const countdownInterval = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+
+</html>
